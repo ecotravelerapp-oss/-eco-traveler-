@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECO TRAVELER</title>
+<style>
+body{font-family:system-ui;margin:0;background:#f5f7fb}
+.header{background:white;padding:20px;text-align:center}
+.header h1{color:#0A2E65;margin:0}
+.search{background:white;margin:20px;border-radius:20px;padding:20px}
+input{width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px}
+.btn{background:#0F5CA8;color:white;width:100%;padding:16px;border:none;border-radius:14px;font-size:18px;font-weight:bold}
+.bus{background:white;margin:12px 20px;border-radius:14px;padding:16px;display:flex;justify-content:space-between}
+.price{color:#0F5CA8;font-weight:bold;font-size:20px}
+</style>
+</head>
+<body>
+<div class="header"><h1>ECO TRAVELER</h1><p>West Africa's Bus Marketplace</p><small>Muhammad Abubakar | 09010014030</small></div>
+<div class="search"><h3 style="color:#0A2E65;text-align:center">SEARCH ROUTE</h3><input value="Lagos"><input value="Accra"><button class="btn">Search Buses - From ₦16,200</button></div>
+<div class="bus"><div><b>GIGM</b> ✓ Verified<br><small>09:00→22:00 | WiFi</small></div><div class="price">₦18,500</div></div>
+<div class="bus"><div><b>ABC Transport</b> 4.5★<br><small>08:30→21:30 | AC</small></div><div class="price">₦16,200</div></div>
+<div class="bus"><div><b>Chisco</b> 4.3★<br><small>10:00→23:30 | WiFi</small></div><div class="price">₦17,000</div></div>
+</body>
+</html>
