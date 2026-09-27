@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ECO TRAVELER</title>
-<style>
-body{font-family:system-ui;margin:0;background:#f5f7fb}
-.header{background:white;padding:20px;text-align:center}
-.header h1{color:#0A2E65;margin:0}
-.search{background:white;margin:20px;border-radius:20px;padding:20px}
-input{width:100%;padding:14px;margin:8px 0;border:1px solid #ddd;border-radius:12px}
-.btn{background:#0F5CA8;color:white;width:100%;padding:16px;border:none;border-radius:14px;font-size:18px;font-weight:bold}
-.bus{background:white;margin:12px 20px;border-radius:14px;padding:16px;display:flex;justify-content:space-between}
-.price{color:#0F5CA8;font-weight:bold;font-size:20px}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Traveler - Book Bus Tickets</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<div class="header"><h1>ECO TRAVELER</h1><p>West Africa's Bus Marketplace</p><small>Muhammad Abubakar | 09010014030</small></div>
-<div class="search"><h3 style="color:#0A2E65;text-align:center">SEARCH ROUTE</h3><input value="Lagos"><input value="Accra"><button class="btn">Search Buses - From ₦16,200</button></div>
-<div class="bus"><div><b>GIGM</b> ✓ Verified<br><small>09:00→22:00 | WiFi</small></div><div class="price">₦18,500</div></div>
-<div class="bus"><div><b>ABC Transport</b> 4.5★<br><small>08:30→21:30 | AC</small></div><div class="price">₦16,200</div></div>
-<div class="bus"><div><b>Chisco</b> 4.3★<br><small>10:00→23:30 | WiFi</small></div><div class="price">₦17,000</div></div>
+<body class="bg-gray-50">
+<header class="bg-white shadow p-4 flex justify-between items-center">
+<h1 style="font-weight:900;color:#16a34a">ECO TRAVELER</h1>
+<a href="https://wa.me/2349010014030" style="background:#16a34a;color:white;padding:8px 16px;border-radius:20px;text-decoration:none;font-weight:bold">09010014030</a>
+</header>
+<div style="max-width:800px;margin:auto;padding:16px">
+<div style="background:#16a34a;color:white;border-radius:20px;padding:24px;text-align:center;margin-top:16px">
+<h2 style="font-size:28px;font-weight:900">Find & Book Bus Tickets</h2>
+<p>Lagos • Accra • Abuja • Kano</p>
+<div style="background:white;border-radius:12px;padding:12px;margin-top:16px;display:flex;gap:8px">
+<input id="from" style="width:50%;border:1px solid #ddd;padding:12px;border-radius:8px" placeholder="From: Lagos" value="Lagos">
+<input id="to" style="width:50%;border:1px solid #ddd;padding:12px;border-radius:8px" placeholder="To: Accra" value="Accra">
+</div>
+</div>
+<div id="busList" style="margin-top:24px"></div>
+</div>
+<script>
+const buses=[
+{company:"GIGM",price:"45,000",time:"6:30 AM",seats:"12 left",rating:"4.8"},
+{company:"ABC Transport",price:"18,500",time:"7:00 AM",seats:"5 left",rating:"4.6"},
+{company:"Peace Mass",price:"22,000",time:"8:15 AM",seats:"20 left",rating:"4.5"},
+{company:"Young Shall Grow",price:"42,000",time:"9:00 AM",seats:"8 left",rating:"4.7"}
+];
+function render(){
+const f=document.getElementById('from').value||'Lagos';
+const t=document.getElementById('to').value||'Accra';
+document.getElementById('busList').innerHTML=buses.map(b=>{
+const msg=`Salam! Ina son tikiti: %0ACompany: ${b.company} %0ADaga: ${f} %0AZuwa: ${t} %0AFarashi: N${b.price} %0ALokaci: ${b.time}`;
+return `<div style="background:white;border-radius:16px;padding:20px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,0.05)"><div><b style="font-size:18px">${b.company}</b> <span style="background:#fef9c3;padding:2px 8px;border-radius:10px;font-size:12px">⭐ ${b.rating}</span><div style="color:gray;font-size:13px;margin-top:4px">${f} → ${t} • ${b.time} • ${b.seats}</div><div style="color:#16a34a;font-weight:900;font-size:20px;margin-top:8px">₦${b.price}</div></div><a href="https://wa.me/2349010014030?text=${msg}" target="_blank" style="background:#16a34a;color:white;padding:12px 24px;border-radius:25px;text-decoration:none;font-weight:900">Book Now</a></div>`}).join('');
+}
+render();
+document.getElementById('from').addEventListener('input',render);
+document.getElementById('to').addEventListener('input',render);
+</script>
 </body>
 </html>
