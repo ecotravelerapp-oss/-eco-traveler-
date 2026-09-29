@@ -42,3 +42,29 @@ document.getElementById('to').addEventListener('input',render);
 </script>
 </body>
 </html>
+<!-- Saka wannan a inda kake son Buy Ticket button ya bayyana -->
+<button id="payButton" style="background:#00C07F; color:white; padding:15px 30px; border:none; border-radius:8px; font-size:18px; font-weight:bold; width:100%;">
+  Biya ₦121,000 - Lagos to Accra
+</button>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+  document.getElementById('payButton').addEventListener('click', function(){
+    var handler = PaystackPop.setup({
+      key: 'pk_test_edd322a565c4cb2a4142c...', // Naka ne - na boye karshen
+      email: 'customer@email.com', // Email din customer
+      amount: 121000 * 100, // ₦121,000 = ₦120k + ₦1k naka
+      currency: 'NGN',
+      ref: 'ECO_' + Math.floor((Math.random() * 1000000000) + 1),
+      callback: function(response){
+        alert('Payment Success! Ref: ' + response.reference);
+        // Nan zaka tura ticket a WhatsApp
+        window.location.href = "https://wa.me/234YOURNUMBER?text=Na+biya+Lagos-Accra+Ref:"+response.reference;
+      },
+      onClose: function(){
+        alert('Ka rufe payment');
+      }
+    });
+    handler.openIframe();
+  });
+</script>
