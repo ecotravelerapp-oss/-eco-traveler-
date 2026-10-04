@@ -3,68 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eco Traveler - Book Bus Tickets</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<meta name="description" content="Eco Traveler — book reliable cross-border bus tickets across West Africa.">
+<title>Eco Traveler | West Africa Bus Marketplace</title>
+<style>
+:root{--ink:#10251d;--muted:#66756d;--green:#1d8b5b;--deep:#0b4b36;--mint:#e8f4ed;--cream:#fbfaf5;--line:#e4ebe5;--orange:#e98245}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:0 24px}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em;font-size:20px}.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--green);color:white;font-size:18px}.nav{display:flex;align-items:center;gap:28px;color:var(--muted);font-size:14px}.nav a{color:inherit;text-decoration:none}.help{border:1px solid var(--line);padding:10px 15px;border-radius:999px;color:var(--ink)!important;background:white}.hero{background:linear-gradient(120deg,#dceddf 0%,#edf5e9 56%,#f9efe2 100%);border-radius:28px;padding:64px 68px 52px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-50px;bottom:-100px;width:310px;height:310px;border:42px solid rgba(29,139,91,.12);border-radius:50%}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin:0 0 16px}.hero h1{font-size:clamp(38px,5vw,66px);line-height:.98;letter-spacing:-.07em;max-width:650px;margin:0 0 18px}.hero h1 span{color:var(--green)}.hero-copy{color:var(--muted);max-width:520px;font-size:16px;line-height:1.6;margin:0}.search-card{background:white;border:1px solid rgba(255,255,255,.8);box-shadow:0 16px 40px rgba(27,67,45,.12);border-radius:18px;padding:10px;margin-top:36px;display:flex;align-items:end;gap:8px;max-width:900px;position:relative;z-index:2}.field{flex:1;padding:8px 14px;border-right:1px solid var(--line)}.field label{display:block;color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}.field input{border:0;outline:0;width:100%;font-size:16px;font-weight:700;color:var(--ink);background:transparent}.swap{border:1px solid var(--line);background:white;border-radius:50%;width:30px;height:30px;align-self:center;color:var(--green);margin-left:-23px;margin-right:-23px;z-index:3}.search-btn{border:0;background:var(--deep);color:white;border-radius:12px;padding:17px 25px;font-weight:800;white-space:nowrap}.popular{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.popular button{border:1px solid rgba(16,37,29,.12);background:rgba(255,255,255,.55);border-radius:999px;padding:8px 13px;color:var(--ink);font-size:12px}.section{padding:46px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}.section h2{font-size:26px;letter-spacing:-.04em;margin:0}.section-sub{color:var(--muted);font-size:14px;margin:6px 0 0}.route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.route{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;transition:transform .2s,box-shadow .2s}.route:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(31,67,47,.1)}.route-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.route-tag{font-size:11px;color:var(--green);background:var(--mint);border-radius:999px;padding:6px 9px;font-weight:800}.route-icon{color:var(--orange);font-size:22px}.route-line{display:flex;align-items:center;gap:10px;font-weight:800}.route-line i{height:1px;flex:1;background:var(--line);position:relative}.route-line i:after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--orange)}.route-meta{font-size:12px;color:var(--muted);margin-top:12px}.result-wrap{display:none}.results{display:grid;gap:12px}.result{background:white;border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}.operator{display:flex;align-items:center;gap:12px;min-width:220px}.logo{display:grid;place-items:center;width:42px;height:42px;background:var(--mint);color:var(--green);border-radius:12px;font-weight:900}.operator strong{display:block}.operator small,.trip small{color:var(--muted)}.trip{flex:1}.trip strong{font-size:15px}.price{text-align:right}.price strong{display:block;font-size:20px}.book{border:0;background:var(--green);color:white;border-radius:9px;padding:11px 16px;font-weight:800;margin-top:7px}.empty{color:var(--muted);font-size:14px;margin:0}.footer{border-top:1px solid var(--line);padding:24px 0 34px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between}.notice{color:var(--green);font-weight:700;font-size:13px;margin-top:14px;display:none}@media(max-width:720px){.shell{padding:0 16px}.topbar{height:68px}.nav a:not(.help){display:none}.hero{padding:38px 22px 24px;border-radius:22px}.search-card{display:grid;grid-template-columns:1fr 1fr;gap:4px}.field{border-right:0;border-bottom:1px solid var(--line);padding:10px}.swap{display:none}.search-btn{grid-column:1/-1;margin-top:5px;width:100%}.route-grid{grid-template-columns:1fr}.section{padding:34px 0}.result{align-items:flex-start;flex-wrap:wrap}.operator{min-width:0}.trip{order:3;flex-basis:100%}.price{margin-left:auto}.footer{display:block;line-height:1.8}}
+</style>
 </head>
-<body class="bg-gray-50">
-<header class="bg-white shadow p-4 flex justify-between items-center">
-<h1 style="font-weight:900;color:#16a34a">ECO TRAVELER</h1>
-<a href="https://wa.me/2349010014030" style="background:#16a34a;color:white;padding:8px 16px;border-radius:20px;text-decoration:none;font-weight:bold">09010014030</a>
-</header>
-<div style="max-width:800px;margin:auto;padding:16px">
-<div style="background:#16a34a;color:white;border-radius:20px;padding:24px;text-align:center;margin-top:16px">
-<h2 style="font-size:28px;font-weight:900">Find & Book Bus Tickets</h2>
-<p>Lagos • Accra • Abuja • Kano</p>
-<div style="background:white;border-radius:12px;padding:12px;margin-top:16px;display:flex;gap:8px">
-<input id="from" style="width:50%;border:1px solid #ddd;padding:12px;border-radius:8px" placeholder="From: Lagos" value="Lagos">
-<input id="to" style="width:50%;border:1px solid #ddd;padding:12px;border-radius:8px" placeholder="To: Accra" value="Accra">
-</div>
-</div>
-<div id="busList" style="margin-top:24px"></div>
-</div>
+<body>
+<header class="shell topbar"><a class="brand" href="#"><span class="brand-mark">↗</span>eco traveler</a><nav class="nav"><a href="#routes">Popular routes</a><a href="#how">How it works</a><a class="help" href="https://wa.me/2349010014030" target="_blank">Need help? <strong>0901 001 4030</strong></a></nav></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">The West African bus marketplace</p><h1>Go further.<br><span>Cross borders</span> simply.</h1><p class="hero-copy">Compare trusted bus companies and book your next journey across Nigeria, Ghana, Benin, Togo and beyond.</p>
+<div class="search-card"><div class="field"><label for="from">Leaving from</label><input id="from" value="Lagos" aria-label="Leaving from"></div><button class="swap" id="swap" aria-label="Swap departure and destination">↔</button><div class="field"><label for="to">Going to</label><input id="to" value="Accra" aria-label="Going to"></div><div class="field"><label for="date">Travel date</label><input id="date" type="date" aria-label="Travel date"></div><button class="search-btn" id="search">Search buses</button></div>
+<div class="popular"><button data-route="Lagos|Accra">Lagos → Accra</button><button data-route="Abuja|Kano">Abuja → Kano</button><button data-route="Cotonou|Lomé">Cotonou → Lomé</button></div><p class="notice" id="notice" role="status"></p></section>
+<section class="section result-wrap" id="resultWrap"><div class="section-head"><div><h2>Available buses</h2><p class="section-sub" id="resultSub"></p></div></div><div class="results" id="results"></div></section>
+<section class="section" id="routes"><div class="section-head"><div><h2>Popular cross-border routes</h2><p class="section-sub">Your next adventure is closer than you think.</p></div></div><div class="route-grid"><article class="route"><div class="route-top"><span class="route-tag">Most booked</span><span class="route-icon">◌</span></div><div class="route-line"><span>Lagos</span><i></i><span>Accra</span></div><p class="route-meta">From ₦45,000 · 12–14 hours</p></article><article class="route"><div class="route-top"><span class="route-tag">Easy connection</span><span class="route-icon">◌</span></div><div class="route-line"><span>Abuja</span><i></i><span>Kano</span></div><p class="route-meta">From ₦18,500 · 10–12 hours</p></article><article class="route"><div class="route-top"><span class="route-tag">New route</span><span class="route-icon">◌</span></div><div class="route-line"><span>Cotonou</span><i></i><span>Lomé</span></div><p class="route-meta">From ₦27,000 · 5–7 hours</p></article></div></section>
+<section class="section" id="how"><div class="section-head"><div><h2>Travel with confidence</h2><p class="section-sub">One place for every leg of your West African journey.</p></div></div><div class="route-grid"><article class="route"><span class="route-tag">01</span><h3>Search</h3><p class="section-sub">Find a route, date and operator that works for you.</p></article><article class="route"><span class="route-tag">02</span><h3>Compare</h3><p class="section-sub">See prices, departure times, ratings and amenities side by side.</p></article><article class="route"><span class="route-tag">03</span><h3>Book</h3><p class="section-sub">Reserve your seat and receive your ticket details on WhatsApp.</p></article></div></section>
+</main><footer class="shell footer"><span>© 2026 eco traveler</span><span>Made for easier journeys across West Africa</span></footer>
 <script>
-const buses=[
-{company:"GIGM",price:"45,000",time:"6:30 AM",seats:"12 left",rating:"4.8"},
-{company:"ABC Transport",price:"18,500",time:"7:00 AM",seats:"5 left",rating:"4.6"},
-{company:"Peace Mass",price:"22,000",time:"8:15 AM",seats:"20 left",rating:"4.5"},
-{company:"Young Shall Grow",price:"42,000",time:"9:00 AM",seats:"8 left",rating:"4.7"}
-];
-function render(){
-const f=document.getElementById('from').value||'Lagos';
-const t=document.getElementById('to').value||'Accra';
-document.getElementById('busList').innerHTML=buses.map(b=>{
-const msg=`Salam! Ina son tikiti: %0ACompany: ${b.company} %0ADaga: ${f} %0AZuwa: ${t} %0AFarashi: N${b.price} %0ALokaci: ${b.time}`;
-return `<div style="background:white;border-radius:16px;padding:20px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,0.05)"><div><b style="font-size:18px">${b.company}</b> <span style="background:#fef9c3;padding:2px 8px;border-radius:10px;font-size:12px">⭐ ${b.rating}</span><div style="color:gray;font-size:13px;margin-top:4px">${f} → ${t} • ${b.time} • ${b.seats}</div><div style="color:#16a34a;font-weight:900;font-size:20px;margin-top:8px">₦${b.price}</div></div><a href="https://wa.me/2349010014030?text=${msg}" target="_blank" style="background:#16a34a;color:white;padding:12px 24px;border-radius:25px;text-decoration:none;font-weight:900">Book Now</a></div>`}).join('');
-}
-render();
-document.getElementById('from').addEventListener('input',render);
-document.getElementById('to').addEventListener('input',render);
-</script>
-</body>
-</html>
-<!-- Saka wannan a inda kake son Buy Ticket button ya bayyana -->
-<button id="payButton" style="background:#00C07F; color:white; padding:15px 30px; border:none; border-radius:8px; font-size:18px; font-weight:bold; width:100%;">
-  Biya ₦121,000 - Lagos to Accra
-</button>
-
-<script src="https://js.paystack.co/v1/inline.js"></script>
-<script>
-  document.getElementById('payButton').addEventListener('click', function(){
-    var handler = PaystackPop.setup({
-      key: 'pk_test_edd322a565c4cb2a4142c...', // Naka ne - na boye karshen
-      email: 'customer@email.com', // Email din customer
-      amount: 121000 * 100, // ₦121,000 = ₦120k + ₦1k naka
-      currency: 'NGN',
-      ref: 'ECO_' + Math.floor((Math.random() * 1000000000) + 1),
-      callback: function(response){
-        alert('Payment Success! Ref: ' + response.reference);
-        // Nan zaka tura ticket a WhatsApp
-        window.location.href = "https://wa.me/234YOURNUMBER?text=Na+biya+Lagos-Accra+Ref:"+response.reference;
-      },
-      onClose: function(){
-        alert('Ka rufe payment');
-      }
-    });
-    handler.openIframe();
-  });
-</script>
+const buses=[['GIGM','6:30 AM','₦45,000','12 seats left','4.8'],['ABC','7:00 AM','₦41,500','5 seats left','4.6'],['Peace Mass','8:15 AM','₦43,000','20 seats left','4.5']];
+const from=document.getElementById('from'),to=document.getElementById('to'),date=document.getElementById('date'),wrap=document.getElementById('resultWrap'),results=document.getElementById('results'),sub=document.getElementById('resultSub'),notice=document.getElementById('notice');
+date.value=new Date().toISOString().split('T')[0];
+function search(){const f=from.value.trim()||'Lagos',t=to.value.trim()||'Accra';sub.textContent=`${f} to ${t} · ${new Date(date.value+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}`;results.innerHTML=buses.map(b=>`<article class="result"><div class="operator"><span class="logo">${b[0].slice(0,2)}</span><div><strong>${b[0]}</strong><small>Verified operator · ★ ${b[4]}</small></div></div><div class="trip"><strong>${b[1]} · ${f} → ${t}</strong><small>${b[3]} · Air conditioning · WiFi</small></div><div class="price"><strong>${b[2]}</strong><button class="book" data-company="${b[0]}">Book seat</button></div></article>`).join('');wrap.style.display='block';wrap.scrollIntoView({behavior:'smooth',block:'start'});notice.textContent='';document.querySelectorAll('.book').forEach(btn=>btn.onclick=()=>{notice.style.display='block';notice.textContent=`Great choice. ${btn.dataset.company} booking support will confirm your seat via WhatsApp.`;window.open(`https://wa.me/2349010014030?text=${encodeURIComponent(`Hello Eco Traveler, I want to book ${btn.dataset.company} from ${f} to ${t}.`)}`,'_blank')})}
+document.getElementById('search').onclick=search;document.getElementById('swap').onclick=()=>{[from.value,to.value]=[to.value,from.value]};document.querySelectorAll('[data-route]').forEach(b=>b.onclick=()=>{[from.value,to.value]=b.dataset.route.split('|');search()});
+</script></body></html>
