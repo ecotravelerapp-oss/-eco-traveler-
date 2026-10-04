@@ -4,30 +4,15 @@
   <title>Payment - Eco Traveler</title>
   <script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
-<body style="font-family: Inter, system-ui, sans-serif; padding: 24px; background: #f7fbf7; color: #123326;">
-  <main style="max-width: 520px; margin: 0 auto; background: white; border: 1px solid #dce9df; border-radius: 24px; padding: 28px; box-shadow: 0 14px 40px rgba(18,51,38,.08);">
-    <p style="margin: 0 0 8px; color: #188653; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;">Eco Traveler checkout</p>
-    <h2 style="margin: 0 0 8px;">Pay ₦121,000</h2>
-    <p style="margin: 0 0 24px; color: #66756d;">Lagos → Accra · Secure seat reservation</p>
-
-    <button onclick="pay()" style="width: 100%; background: #188653; color: white; padding: 15px 20px; border: none; border-radius: 12px; font-size: 16px; font-weight: 800;">
-      Pay securely with Paystack
-    </button>
-
-    <div style="display: flex; align-items: center; gap: 12px; margin: 24px 0; color: #91a096; font-size: 12px;"><span style="height: 1px; flex: 1; background: #e1ebe3;"></span>or scan to pay<span style="height: 1px; flex: 1; background: #e1ebe3;"></span></div>
-    <section style="text-align: center; border: 1px solid #e1ebe3; border-radius: 16px; padding: 20px; background: #fbfdfb;">
-      <img id="paymentQr" width="180" height="180" alt="QR code for Eco Traveler Paystack checkout" style="display: block; margin: 0 auto 14px; border-radius: 8px;" />
-      <strong>Scan this QR code</strong>
-      <p style="margin: 6px 0 0; color: #66756d; font-size: 13px;">Open the secure Paystack payment page on your phone.</p>
-    </section>
-    <p style="margin: 18px 0 0; color: #66756d; font-size: 12px; line-height: 1.5;">Never share your card PIN or OTP. Eco Traveler will never ask you to pay into a personal account.</p>
-  </main>
+<body style="font-family: sans-serif; padding: 20px; background: #f0fdf4;">
+  <h2>Pay N121,000 - Lagos → Accra</h2>
+  <button onclick="pay()" style="background: green; color: white; padding: 15px 30px; border: none; border-radius: 10px; font-size: 18px;">
+    Pay Now with Paystack
+  </button>
 
 <script>
   // @ts-nocheck
   const publicKey = 'pk_test_edd322a565c4cb2a4142c2b56c60d8a2aace8d0e';
-  const checkoutUrl = window.location.href.split('?')[0] + '?checkout=paystack&amount=121000&route=lagos-accra';
-  document.getElementById('paymentQr').src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=8&data=${encodeURIComponent(checkoutUrl)}`;
 
   function pay(){
     var handler = PaystackPop.setup({
